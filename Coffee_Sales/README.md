@@ -12,24 +12,24 @@ Business questions:
 <table>
     <thead>
         <tr>
-            <th>Visualization</th>
+            <th colspan=3>Visualization</th>
         </tr>
     </thead>
     <tbody>
         <tr>
+            <td><img src='Coffee_Names_Distribution.png'></td>
+            <td><img src='UAH_Violinplot.png'></td>
+            <td><img src='Coffee_Sales_by_Total_Qty.png'></td>
+        </tr>
+        <tr>
+            <td><img src='Coffee_Sales_UAH_by_Hour.png'></td>
             <td><img src='Total_Coffee_Sales_Qty_by_Hour.png'></td>
-            <td>L2 Name A</td>
-            <td>L3 Name A</td>
+            <td><img src='Weekly_Coffee_Sales_in_UAH.png'></td>
         </tr>
         <tr>
-            <td>L3 Name B</td>
-        </tr>
-        <tr>
-            <td rowspan=2>L2 Name B</td>
-            <td>L3 Name C</td>
-        </tr>
-        <tr>
-            <td>L3 Name D</td>
+            <td><img src='Total_Coffee_Sales_Qty_by_Day_of_Week.png'></td>
+            <td><img src='Total_Coffee_Sales_Qty_by_Hour_CashType.png'></td>
+            <td><img src='Total_Coffee_Sales_Qty_by_Hour_TopSpender.png'></td>
         </tr>
     </tbody>
 </table>
