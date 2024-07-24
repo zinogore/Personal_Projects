@@ -1,7 +1,7 @@
 |File|Description|
 |-|-|
 |[Coffee_Sales.csv](index.csv)|CSV file which contains the coffee sales data|
-|[Coffee_Sales.ipynb](Coffee_Sales.ipynb)|Python notebook which contains the steps to achieve the visualizations below|
+|[Coffee_Sales.ipynb](Coffee_Sales.ipynb)|Jupyter notebook which contains the steps to achieve the visualizations below|
 
 
 Business questions:
