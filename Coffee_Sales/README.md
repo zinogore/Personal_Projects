@@ -1,17 +1,18 @@
+Project Summary:
+1. Practice extensive data analysis and visualization.
+2. Practice asking relevant business questions:
+    * What are the most popular coffees?
+    * What time of day has the most sales?
+    * What is the distribution of coffee type for that time of day in Q2?
+    * What is the average weekly sale?
+    * Which day of the week has most sales?
+    * What time of day has the most cash sales?
+    * What are the spending habits of the top spender?
+
 |File|Description|
 |-|-|
 |[Coffee_Sales.csv](index.csv)|CSV file which contains the coffee sales data|
 |[Coffee_Sales.ipynb](Coffee_Sales.ipynb)|Jupyter notebook which contains the steps to achieve the visualizations below|
-
-
-Business questions:
-1. What are the most popular coffees?
-2. What time of day has the most sales?
-3. What is the distribution of coffee type for that time of day in Q2?
-4. What is the average weekly sale?
-5. Which day of the week has most sales?
-6. What time of day has the most cash sales?
-7. What are the spending habits of the top spender?
 
 <table>
     <thead>
