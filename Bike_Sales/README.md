@@ -19,4 +19,9 @@ Project Summary:
             <th colspan=3>Visualization</th>
         </tr>
     </thead>
+    <tbody>
+       <tr>
+          <td><img src=Income_PurchaseChoice.jpg></td>
+       </tr>
+    </tbody>
 </table>
