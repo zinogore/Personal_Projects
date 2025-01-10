@@ -3,6 +3,10 @@ Project Summary:
    * This practice focuses on 1) asking relevant business questions to drive analysis direction, 2) exploring visualization techniques and 3) hyper-parameter optimization.
    * Lastly, the steps, outcomes and learnings are documented here to serve as a basis/template for future projects
 
+|File|Description|
+|-|-|
+|[Bike_Sales.ipynb](Bike_Sales.ipynb)|Jupyter notebook which contains the steps to achieve the results below|
+
 1.  Business questions:
     * What pattern/trend can you find in the customers who purchased bikes vs those who did not?
       - What relationships can you find between the feature columns and the target column?
@@ -23,9 +27,3 @@ Project Summary:
 
 3.  Build classifiers
 4.  Outcomes and learnings
-
-
-
-|File|Description|
-|-|-|
-|[Bike_Sales.ipynb](Bike_Sales.ipynb)|Jupyter notebook which contains the steps to achieve the results below|
