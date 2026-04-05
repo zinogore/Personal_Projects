@@ -42,12 +42,17 @@ dict_chat_id = {}
 global_chat_id = None
 repoll_options = []
 
-def get_options(POLL_OPTIONS=POLL_OPTIONS, NUM_OPTIONS=NUM_OPTIONS, NUM_SHUFFLE=NUM_SHUFFLE):
-    for _ in range(NUM_SHUFFLE):
-        random.shuffle(POLL_OPTIONS)
+def get_options(poll_options=POLL_OPTIONS, n_options=NUM_OPTIONS, n_shuffle=NUM_SHUFFLE):
+    """
+    Shuffle Poll options n times
+    
+    Choose n unique options and append to list
+    """
+    for _ in range(n_shuffle):
+        random.shuffle(poll_options)
     options = []
-    for i in random.sample(range(len(POLL_OPTIONS)),NUM_OPTIONS):
-        options.append(POLL_OPTIONS[i])
+    for i in random.sample(range(len(poll_options)),n_options):
+        options.append(poll_options[i])
     return options
 
 # Commands
