@@ -1,0 +1,70 @@
+{
+    "data": {
+        "climbing_gyms": [
+            {
+                "name": "BP @ Sembawang",
+                "visit": 0
+            },
+            {
+                "name": "BP @ TaiSeng",
+                "visit": 0
+            },
+            {
+                "name": "BFF @ Bendy",
+                "visit": 0
+            },
+            {
+                "name": "BM @ Bugis",
+                "visit": 0
+            },
+            {
+                "name": "BM @ TaiSeng",
+                "visit": 0
+            },
+            {
+                "name": "BM @ Downtown",
+                "visit": 0
+            },
+            {
+                "name": "BM @ Rochor",
+                "visit": 0
+            },
+            {
+                "name": "B+ @ Chevy",
+                "visit": 0
+            },
+            {
+                "name": "B+ @ Aperia",
+                "visit": 0
+            },
+            {
+                "name": "House of Light",
+                "visit": 0
+            },
+            {
+                "name": "OYEYO",
+                "visit": 0
+            },
+            {
+                "name": "CC @ Kallang",
+                "visit": 0
+            },
+            {
+                "name": "CC @ Funan",
+                "visit": 0
+            },
+            {
+                "name": "FB @ Depot",
+                "visit": 0
+            },
+            {
+                "name": "FB @ Park of science",
+                "visit": 0
+            },
+            {
+                "name": "Ark Bloc",
+                "visit": 0
+            }
+        ]
+    }
+}
