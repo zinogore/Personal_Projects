@@ -1,5 +1,5 @@
 import random
-from src.data_handler import get_list_of_gym_names
+from src.db_handler import get_list_of_gym_names
 
 POLL_OPTIONS = get_list_of_gym_names()
 NUM_OPTIONS = 7
