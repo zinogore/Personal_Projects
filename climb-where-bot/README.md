@@ -18,7 +18,7 @@
 
 |Command|Description|Visualization|
 |-|-|-|
-|```/help```|List helpful commands with step by step guide (strong language is just for bot personality)|![alt_text](https://github.com/zinogore/Personal_Projects/blob/main/climb-where-bot/assets/help_command.jpg)|
+|```/help```|List helpful commands with step by step guide (strong language is just for bot personality)|![alt_text](https://github.com/zinogore/Personal_Projects/blob/main/climb-where-bot/assets/help2_command.jpg)|
 |```/generate_poll```|Generate poll with randomized options|![alt_text](https://github.com/zinogore/Personal_Projects/blob/main/climb-where-bot/assets/generate_command.jpg)|
 |```/close_poll```|Close latest poll and return podium results|![alt_text](https://github.com/zinogore/Personal_Projects/blob/main/climb-where-bot/assets/close_command.jpg)|
 |```/re_poll```|Re-poll with previous closed poll results|![alt_text](https://github.com/zinogore/Personal_Projects/blob/main/climb-where-bot/assets/repoll_command.jpg)|

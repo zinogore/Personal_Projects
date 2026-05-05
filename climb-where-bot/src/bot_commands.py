@@ -4,6 +4,7 @@ from src.db_handler import get_list_of_gym_names
 POLL_OPTIONS = get_list_of_gym_names()
 NUM_OPTIONS = 7
 NUM_SHUFFLE = 3
+NON_RUDE = True
 dict_chat_id = {}
 global_chat_id = None
 repoll_options = []
@@ -27,21 +28,35 @@ async def help_command(update, context):
     """
     Reply to /help command with list of help commands
     """
+    if NON_RUDE:
+        help_text = "get useful bot commands with how to use guide"
+        close_text = "close previously generated poll and print podium results - podium means top 3"
+        step_2 = "Cast your vote"
+        step_4 = "Close the poll with /close_poll command - you cannot vote on a closed poll"
+        step_5 = "The poll podium results will be shown"
+        step_7 = "Enjoy the results and climbing!"
+    else:
+        help_text = "get bot commands for climbers without eyes"
+        close_text = "close previously generated poll and print podium results - podium means top 3 you crayon eater"
+        step_2 = "Cast your pathetic vote"
+        step_4 = "Close the poll with /close_poll command - you cannot vote on a closed poll, read step 3 you idiot"
+        step_5 = "The poll podium results will be shown - again, podium means top 3 you birdbrain"
+        step_7 = "Enjoy the gym of NOT your choice sucker"
     await update.message.reply_text(f"""
 Hello!
-/help - get bot commands for climbers without eyes
+/help - {help_text}
 /generate_poll - generate climb where poll with {NUM_OPTIONS} options
-/close_poll - close previously generated poll and print podium results - podium means top 3 you crayon eater
+/close_poll - {close_text}
 /re_poll - re-poll (single choice) with podium results
 
 How to use:
 1. Generate a climb where poll with /generate_poll command
-2. Cast your pathetic vote
+2. {step_2}
 3. Wait for voting to finish amongst awesome climbers
-4. Close the poll with /close_poll command - you cannot vote on a closed poll, read step 3 you idiot
-5. The poll podium results will be shown - again, podium means top 3 you birdbrain
+4. {step_4}
+5. {step_5}
 6. Use /re_poll to re-poll with podium results - this poll will be single choice
-7. Enjoy the gym of NOT your choice sucker""")
+7. {step_7}""")
 
 async def generate_poll_command(update, context):
     """
