@@ -1,13 +1,16 @@
 import random
+import logging
 from src.db_handler import get_list_of_gym_names
 
 POLL_OPTIONS = get_list_of_gym_names()
 NUM_OPTIONS = 7
 NUM_SHUFFLE = 3
-NON_RUDE = True
+NON_RUDE = False
 dict_chat_id = {}
-global_chat_id = None
+dict_poll_id = {}
 repoll_options = []
+
+logger = logging.getLogger(__name__)
 
 # Helpers
 def get_options(poll_options=POLL_OPTIONS, n_options=NUM_OPTIONS, n_shuffle=NUM_SHUFFLE):
@@ -23,6 +26,15 @@ def get_options(poll_options=POLL_OPTIONS, n_options=NUM_OPTIONS, n_shuffle=NUM_
         options.append(poll_options[i])
     return options
 
+def store_ids(chat_id, message_id, poll_id):
+    # store poll message id and chat id in dict of stack
+    if chat_id in dict_chat_id:
+        dict_chat_id[chat_id].append(message_id)
+    else: dict_chat_id[chat_id] = [message_id]
+    dict_poll_id[poll_id] = chat_id
+    logger.info(f"dict_chat_id: {dict_chat_id}")
+    logger.info(f"dict_poll_id: {dict_poll_id}")
+    
 # Commands
 async def help_command(update, context):
     """
@@ -71,11 +83,7 @@ async def generate_poll_command(update, context):
         is_anonymous = False,
         allows_multiple_answers = True
     )
-    # store poll message id and chat id in dict of stack
-    if chat_id in dict_chat_id:
-        dict_chat_id[chat_id].append(message.message_id)
-    else: dict_chat_id[chat_id] = [message.message_id]
-    print('dict_chat_id:',dict_chat_id)
+    store_ids(chat_id=chat_id, message_id=message.id, poll_id=message.poll.id)
 
 async def close_poll_command(update, context):
     """
@@ -93,10 +101,7 @@ async def close_poll_command(update, context):
         return
     # pop last poll message id and chat id
     message_id = dict_chat_id[chat_id].pop()
-    # bot.stop_poll(message_id, chat_id)
-    print(f'Stopping poll - chat_id: {chat_id}, message_id: {message_id}')
-    global global_chat_id
-    global_chat_id = chat_id
+    logger.info(f'Stopping poll - chat_id: {chat_id}, message_id: {message_id}')
     await context.bot.stop_poll(chat_id = chat_id, message_id = message_id)
     
 # print poll results after closing poll
@@ -108,7 +113,7 @@ async def get_poll_results(update, context):
     """
     poll = update.poll
     if poll.is_closed:
-        print(f'Poll: {poll.question} (ID: {poll.id} is closed.)')
+        logger.info(f'Poll: {poll.question} (ID: {poll.id}) is closed.')
         res = [(o.text,o.voter_count) for o in poll.options]
         sorted_res = sorted(res, key = lambda item: item[1], reverse = True)
         global repoll_options
@@ -125,8 +130,10 @@ async def get_poll_results(update, context):
                 repoll_options.append(v)
                 message += f'\n{i+1}. {v[0]} - Votes: {v[1]}'
             else: break
-        print('Bot:',message)
-        await context.bot.send_message(chat_id = global_chat_id, text = message)
+        logger.info(f"repoll_options: {repoll_options}")
+        logger.info(f"Bot sent: {repoll_options}")
+        chat_id = dict_poll_id.pop(poll.id)
+        await context.bot.send_message(chat_id = chat_id, text = message)
 
 # re-poll top 3 from previous closed poll
 async def repoll_command(update, context):
@@ -144,8 +151,4 @@ async def repoll_command(update, context):
         is_anonymous = False,
         allows_multiple_answers = False
     )
-    # store poll message id and chat id in dict of stack
-    if chat_id in dict_chat_id:
-        dict_chat_id[chat_id].append(message.message_id)
-    else: dict_chat_id[chat_id] = [message.message_id]
-    print('dict_chat_id:',dict_chat_id)
+    store_ids(chat_id=chat_id, message_id=message.id, poll_id=message.poll.id)
