@@ -20,6 +20,13 @@ from src.bot_commands import help_command, generate_poll_command, close_poll_com
 # - LLM chatbot
 # -- lightweight LLM or chatbot API
 # - runtime -> whether schedule or run indefinitely
+# check for empty repoll options
+# map repoll options to chat id
+# migrate thread data to db
+# TODO DONE
+# handle edited messages
+# fix logging info not sending to dev chat
+# optimize poll id tracking
 
 # Enable logging
 logging.basicConfig(
@@ -39,9 +46,10 @@ DEV_CHAT_ID = os.environ.get("DEV_CHAT_ID")
 
 # Handle messages from group | supergroup | private
 async def handle_message(update, context):
-    message_type = update.message.chat.type
-    text = update.message.text
-    print(f'User ({update.message.chat.id}) in {message_type}: "{text}"')
+    # handle photos (? for LLM)
+    message_type = update.effective_chat.type
+    text = update.effective_message.text
+    logger.info(f'User ({update.effective_user.username}) in {message_type} ({update.effective_chat.id}): "{text}"')
     if message_type == 'group' or message_type == 'supergroup':
         if BOT_USERNAME in text:
             new_text = text.replace(BOT_USERNAME,'').strip()
@@ -50,8 +58,8 @@ async def handle_message(update, context):
             return
     else:
         response = handle_response(text)
-    print('Bot:',response)
-    await update.message.reply_text(response)
+    logger.info(f"Bot sent: {response}")
+    await update.effective_message.reply_text(response)
 
 # Errors
 async def error(update, context):
@@ -75,9 +83,9 @@ async def error(update, context):
         f"<pre>context.user_data = {html.escape(str(context.user_data))}</pre>\n\n"
         f"<pre>{html.escape(tb_string)}</pre>"
     )
-
-    await update.message.reply_text(text=f"An exception was raised: {tb_list[-1]}")
     await context.bot.send_message(chat_id=DEV_CHAT_ID, text=message, parse_mode=ParseMode.HTML)
+    await update.message.reply_text(text=f"An exception was raised: {tb_list[-1]}")
+        
 
 if __name__ == '__main__':
     logger.info('Starting bot...')
