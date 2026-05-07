@@ -24,9 +24,6 @@ from src.bot_commands import help_command, generate_poll_command, close_poll_com
 # map repoll options to chat id
 # migrate thread data to db
 # TODO DONE
-# handle edited messages
-# fix logging info not sending to dev chat
-# optimize poll id tracking
 
 # Enable logging
 logging.basicConfig(
