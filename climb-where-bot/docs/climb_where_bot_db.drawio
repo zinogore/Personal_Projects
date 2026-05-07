@@ -1,0 +1,150 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36">
+  <diagram name="Page-1" id="kfRWOiZfH1Z2Cevyeqhm">
+    <mxGraphModel dx="1414" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-41" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="320" width="800" x="20" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="360" width="800" x="20" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo36_9BCTeJE7cR21qvM-18" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;climbing_gyms&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;gym_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;gym_name&lt;br&gt;location&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="60" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo36_9BCTeJE7cR21qvM-19" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;chats&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;chat_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;chat_name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;repoll_options&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="80" width="180" x="290" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vo36_9BCTeJE7cR21qvM-20" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;visits&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;visit_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;count&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FK1&lt;/td&gt;&lt;td&gt;gym_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FK2&lt;/td&gt;&lt;td&gt;chat_id&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="100" width="180" x="60" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-2" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;polls&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;poll_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FK1&lt;/td&gt;&lt;td&gt;chat_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;message_id&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="80" width="180" x="530" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-12" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Generate poll via command" vertex="1">
+          <mxGeometry height="60" width="120" x="200" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-14" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-9" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Store ids in polls" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-24" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-23" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-13" parent="1" style="whiteSpace=wrap;html=1;rounded=1;" value="User votes finish and closes poll via command" vertex="1">
+          <mxGeometry height="60" width="120" x="500" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-26" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-25" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-23" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Lookup polls with chat id to get message id" vertex="1">
+          <mxGeometry height="60" width="120" x="500" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-28" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-27" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-25" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Closes poll using message id + chat id" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-30" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-29" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-27" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Closing poll triggers get_poll_results" vertex="1">
+          <mxGeometry height="60" width="120" x="200" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-38" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-37" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-29" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Lookup polls with poll id to get chat id" vertex="1">
+          <mxGeometry height="60" width="120" x="200" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-40" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-39" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-37" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Send poll result to chat using chat id" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-68" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-67" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-39" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Store repoll options for repolling" vertex="1">
+          <mxGeometry height="60" width="120" x="500" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-42" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=ellipse;fixedSize=1;perimeter=ellipsePerimeter;" value="Generate poll + close poll" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-43" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=ellipse;perimeter=ellipsePerimeter;" value="DB relationship" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-48" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="320" width="800" x="20" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-49" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-52" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-50" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Generate repoll via command" vertex="1">
+          <mxGeometry height="60" width="120" x="200" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-51" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-54" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-52" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Lookup chats with chat id for repoll options&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-53" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-56" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-54" parent="1" style="whiteSpace=wrap;html=1;rounded=0;shape=process;backgroundOutline=1;" value="Send poll with repoll options" vertex="1">
+          <mxGeometry height="60" width="120" x="500" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-70" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-69" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-56" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Clear repoll options" vertex="1">
+          <mxGeometry height="60" width="120" x="500" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-57" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="900" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-59" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="930" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-61" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="1000" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-63" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="1000" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-66" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=ellipse;perimeter=ellipsePerimeter;" value="Repoll" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-67" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Remove ids from polls" vertex="1">
+          <mxGeometry height="60" width="120" x="650" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-73" edge="1" parent="1" source="6XCaQoXUTHiMZIWkd1vw-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6XCaQoXUTHiMZIWkd1vw-72" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-69" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Store ids in polls" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="6XCaQoXUTHiMZIWkd1vw-72" parent="1" style="whiteSpace=wrap;html=1;shape=ellipse;perimeter=ellipsePerimeter;" value="Generate + close poll workflow" vertex="1">
+          <mxGeometry height="60" width="120" x="200" y="870" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
