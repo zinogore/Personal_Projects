@@ -1,12 +1,13 @@
 import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from src.db_handler import Base, Chats, Polls, Visits, get_list_of_gym_names, store_ids
+from src.app.models.models import Base, Chats, Polls, Visits
+from src.app.repositories.repository import get_list_of_gym_names, store_ids
 
 # 1. Setup
 @pytest.fixture
 def db_session():
-    engine = create_engine("sqlite:///:memory:")
+    engine = create_engine("sqlite:///:memory:", echo=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
