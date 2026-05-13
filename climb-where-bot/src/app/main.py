@@ -8,18 +8,8 @@ from src.app.services.bot_commands import BotCommands
 from src.app.repositories.repository import get_list_of_gym_names
 
 # TODO
-# refactor: improve readability by using objects to define main app logic - DONE
-# refactor: manage db models - DONE
-# refactor: manage db session - DONE
-# refactor: manage data access layer (repository) - FIX REQUIRED
-
-# create store ids method - polls table
-# create remove ids method - polls table
-# creat store repoll options method - chats table
-
-# fix: check for empty repoll options
-# map repoll options to chat id
-# migrate thread data to db
+# refactor: manage data access layer (repository) - DONE
+# refactor: remove use of program data for metadata storage, added data access for metadata in db - DONES
 
 # Future works
 # -- lightweight LLM or chatbot API
@@ -47,9 +37,6 @@ POLL_OPTIONS = get_list_of_gym_names()
 NUM_OPTIONS = 7
 NUM_SHUFFLE = 3
 NON_RUDE = False
-dict_chat_id = {}
-dict_poll_id = {}
-repoll_options = []
 
 bot_responses = BotResponses(bot_username=BOT_USERNAME, dev_chat_id=DEV_CHAT_ID, logger=logger)
 bot_commands = BotCommands(
@@ -57,9 +44,6 @@ bot_commands = BotCommands(
     num_options=NUM_OPTIONS,
     num_shuffle=NUM_SHUFFLE,
     non_rude=NON_RUDE,
-    dict_chat_id=dict_chat_id,
-    dict_poll_id=dict_poll_id,
-    repoll_options=repoll_options,
     logger=logger
     )
 
