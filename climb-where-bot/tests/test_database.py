@@ -2,7 +2,6 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from src.app.models.models import Base, Chats, Polls, Visits
-from src.app.repositories.repository import get_list_of_gym_names, store_ids
 
 # 1. Setup
 @pytest.fixture
